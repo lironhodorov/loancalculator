@@ -11,16 +11,17 @@ export class LoanFormComponent {
   loanForm: FormGroup;
   loanDetails: any;
   formattedLoanDetails: string | null = null;
+  loanFormControls:any;
 
   constructor(private fb: FormBuilder, private loanService: LoanService) {
     this.loanForm = this.fb.group({
       clientId: ['', Validators.required],
       amount: ['', [Validators.required, Validators.min(1)]],
       periodInMonths: ['', [Validators.required, Validators.min(12)]]
-    });
+    });   
+    this.loanFormControls= this.loanForm.controls; 
   }
 
-  get f() { return this.loanForm.controls; }
 
   onSubmit() {
     if (this.loanForm.valid) {
@@ -32,7 +33,6 @@ export class LoanFormComponent {
   }
 
   formatLoanDetails(data: any): string {
-    debugger;
     const baseInterestPercentage = (data.baseInterestPrecentage * 100).toFixed(2);
     const extraPeriodInterestPercentage = (data.extraPeriodInterestPrecentage * 100).toFixed(2);
     const baseTotalAmount = data.baseTotalAmount.toFixed(2);

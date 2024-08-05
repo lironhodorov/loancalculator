@@ -3,26 +3,26 @@
       <div class="form-group">
         <label for="clientId">Client Id</label>
         <input id="clientId" formControlName="clientId" type="number" class="form-control" />
-        <div *ngIf="f['clientId'].invalid && (f['clientId'].dirty || f['clientId'].touched)" class="alert alert-danger">
-          <div *ngIf="f['clientId'].errors?.['required']">Client Id is required.</div>
+        <div *ngIf="loanFormControls['clientId'].invalid && (loanFormControls['clientId'].dirty || loanFormControls['clientId'].touched)" class="alert alert-danger">
+          <div *ngIf="loanFormControls['clientId'].errors?.['required']">Client Id is required.</div>
         </div>
       </div>
   
       <div class="form-group">
         <label for="amount">Loan Amount</label>
         <input id="amount" formControlName="amount" type="number" class="form-control" />
-        <div *ngIf="f['amount'].invalid && (f['amount'].dirty || f['amount'].touched)" class="alert alert-danger">
-          <div *ngIf="f['amount'].errors?.['required']">Loan amount is required.</div>
-          <div *ngIf="f['amount'].errors?.['min']">Loan amount must be greater than 0.</div>
+        <div *ngIf="loanFormControls['amount'].invalid && (loanFormControls['amount'].dirty || loanFormControls['amount'].touched)" class="alert alert-danger">
+          <div *ngIf="loanFormControls['amount'].errors?.['required']">Loan amount is required.</div>
+          <div *ngIf="loanFormControls['amount'].errors?.['min']">Loan amount must be greater than 0.</div>
         </div>
       </div>
   
       <div class="form-group">
-        <label for="periodInMonths">Loan Period (months)</label>
+        <label for="periodInMonths">Loan Period In Months</label>
         <input id="periodInMonths" formControlName="periodInMonths" type="number" class="form-control" />
-        <div *ngIf="f['periodInMonths'].invalid && (f['periodInMonths'].dirty || f['periodInMonths'].touched)" class="alert alert-danger">
-          <div *ngIf="f['periodInMonths'].errors?.['required']">Loan period is required.</div>
-          <div *ngIf="f['periodInMonths'].errors?.['min']">Loan period must be at least 12 months.</div>
+        <div *ngIf="loanFormControls['periodInMonths'].invalid && (loanFormControls['periodInMonths'].dirty || loanFormControls['periodInMonths'].touched)" class="alert alert-danger">
+          <div *ngIf="loanFormControls['periodInMonths'].errors?.['required']">Loan period is required.</div>
+          <div *ngIf="loanFormControls['periodInMonths'].errors?.['min']">Loan period must be at least 12 months.</div>
         </div>
       </div>
   
