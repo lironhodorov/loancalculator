@@ -1,0 +1,6 @@
+@LoanCalculator_HostAddress = http://localhost:5264/api
+
+GET {{LoanCalculator_HostAddress}}/LoanController/
+Accept: application/json
+
+###

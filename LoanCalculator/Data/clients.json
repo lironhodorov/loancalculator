@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Moshe Cohen",
+    "age": 18
+  },
+  {
+    "id": 2,
+    "name": "Liron Shaked Hodorov",
+    "age": 31
+  },
+  {
+    "id": 3,
+    "name": "Alona Baum",
+    "age": 40
+  }
+]
